@@ -47,11 +47,11 @@ import { BasicListComponent } from './shared/basic-list/basic-list.component';
     FormsModule,
     MonacoEditorModule.forRoot(monacoConfig),
     MsAdalAngular6Module.forRoot({
-      tenant: 'b2461714-367f-46fc-888c-6a50d99ec8b4',
-      clientId: '9c66cf46-331f-429f-b27b-e301c09e5bf5',
+      tenant: '',
+      clientId: '',
       redirectUri: window.location.origin,
       endpoints: {
-        "https://localhost:44308/api/v1.0/": "9c66cf46-331f-429f-b27b-e301c09e5bf5",
+        "https://localhost:44308/api/v1.0/": "",
         "https://graph.microsoft.com": "https://graph.microsoft.com"
       },
       navigateToLoginRequestUrl: false,
