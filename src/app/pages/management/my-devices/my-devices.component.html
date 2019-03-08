@@ -1,0 +1,15 @@
+<div class="management-container">
+  <div class="management-bar">
+    <div class="management-bar-item">My Company</div>
+  </div>
+  <div class="item-area">
+    <h1 class="section-title">My Devices</h1>
+    <div *ngFor="let device of devices" class="item">
+      <div class="item-icon"><span class="ms-Icon ms-Icon--System icon-system" aria-hidden="true"></span></div>
+      <div class="item-title">
+        <div [ngClass]="device.enabled ? 'online-icon' : 'offline-icon'"></div><span>{{device.name}}</span>
+      </div>
+      <div class="item-description">{{device.operatingSystem}}</div>
+    </div>
+  </div>
+</div>

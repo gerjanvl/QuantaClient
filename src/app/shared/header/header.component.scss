@@ -1,0 +1,55 @@
+.o365-nav-bar {
+  height: 48px;
+  line-height: 48px;
+  width: 100%;
+  background-color: #28b5e5;
+}
+.nav-item {
+  float: left;
+  height: 48px;
+}
+.user-picture {
+  height: 48px;
+  width: 48px;
+  float: right;
+}
+.user-picture:hover {
+  background-color: #127799;
+}
+.user-picture-image {
+  margin: calc((48px - 32px) / 2);
+  border-radius: 50%;
+}
+.navigator {
+  height: 48px;
+  width: 48px;
+  float: left;
+  text-align: center;
+  color: white;
+}
+.navigator:hover {
+  background-color: #127799;
+}
+.ms-icon-font-size-16 {
+  font-size: 16px;
+}
+.brand-text {
+  font-size: 16px;
+  line-height: 48px;
+  color: #fff;
+  display: inline-block;
+}
+.company-branding {
+  padding-left: 8px;
+}
+.branding-sperator-item {
+  padding: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  float: left;
+}
+.branding-sperator-seperator {
+  width: 1px;
+  background-color: white;
+  height: 28px;
+}

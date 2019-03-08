@@ -1,0 +1,12 @@
+<div class="pane-container">
+  <div class="pane" *ngFor="let pane of panes">
+    <div class="pane-command-bar">
+      <div class="pane-btn btn-close" (click)="close(pane.id)">
+          <span class="ms-Icon ms-Icon--ChromeClose menu-icon" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="pane-content">
+      <ng-container *ngTemplateOutlet="pane.template"></ng-container>
+    </div>
+  </div>
+</div>

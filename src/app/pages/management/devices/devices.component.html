@@ -1,0 +1,54 @@
+<div class="management-container">
+  <div class="management-bar">
+    <div class="management-bar-item">My Company</div>
+  </div>
+  <h1 class="management-page-title">Devices</h1>
+  <div class="management-toolbar">
+    <div class="btn-toolbar" (click)="addDevice()">
+      <i class="ms-Icon ms-Icon--Add btn-toolbar-icon" role="presentation"></i>
+      <span class="btn-toolbar-label">Add a device</span>
+    </div>
+    <div class="btn-toolbar" (click)="refresh()">
+      <i
+        class="ms-Icon ms-Icon--Refresh btn-toolbar-icon"
+        role="presentation"
+      ></i>
+      <span class="btn-toolbar-label">Refresh</span>
+    </div>
+  </div>
+  <app-basic-list [items]="devices" [columns]="columns"></app-basic-list>
+</div>
+
+<ng-template #popupTemplateRef>
+  <h1 class="anagement-page-title">New Device</h1>
+
+  <div class="form-group">
+      <div class="ms-TextField">
+          <label class="ms-Label">Name</label>
+          <input class="ms-TextField-field" type="text" [(ngModel)]="test" placeholder="">
+        </div>
+  </div>
+  <div class="form-group">
+      <div class="ms-TextField">
+          <label class="ms-Label">Operating System</label>
+          <input class="ms-TextField-field" type="text" [(ngModel)]="test" placeholder="">
+        </div>
+  </div>
+  <div class="form-group">
+    <label class="text-label">Connection Settings</label>
+    <ngx-monaco-editor
+      class="cs-editor"
+      [options]="options"
+      [(ngModel)]="jsonCode"
+      [model]="model"
+    ></ngx-monaco-editor>
+  </div>
+  <div class="form-group">
+  <button class="ms-Button ms-Button--primary">
+    <span class="ms-Button-label">Save</span>
+  </button>
+  <button class="ms-Button ms-Button--primary btn-cancel">
+    <span class="ms-Button-label">Cancel</span>
+  </button>
+  </div>
+</ng-template>

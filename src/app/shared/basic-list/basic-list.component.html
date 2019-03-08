@@ -1,0 +1,22 @@
+<div class="detail-list">
+    <div class="detail-list-header">
+      <div *ngFor="let column of columns" class="header-cell" [ngClass]="{'highlighted-cell-header': column.highlighted}" [style.width.px]="column.width">
+        <div class="column-title">
+          <span>{{column.caption}}</span>
+          <i *ngIf="column.sorting" class="ms-Icon ms-Icon--SortUp sort-icon" role="presentation"></i>
+        </div>
+      </div>
+    </div>
+    <div class="detail-list-content">
+      <div class="detail-list-page">
+        <div *ngFor="let item of items" (click)="onRowClick.emit(item)" class="detail-list-row">
+          <div *ngFor="let column of columns" class="detail-list-cell" [ngClass]="{'highlighted-cell': column.highlighted}" [style.width.px]="column.width">
+              <button class="command-button" *ngIf="column.highlighted">
+                  <i class="ms-Icon ms-Icon--MoreVertical command-button-icon" role="presentation"></i>
+                </button>
+            <span>{{item[column.fieldName]}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

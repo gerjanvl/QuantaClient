@@ -1,0 +1,18 @@
+<div class="management-container">
+  <div class="management-bar">
+    <div class="management-bar-item">My Company</div>
+  </div>
+  <h1 class="management-page-title">Users</h1>
+  <div class="management-toolbar">
+    <div class="btn-toolbar">
+      <i class="ms-Icon ms-Icon--AddFriend btn-toolbar-icon" role="presentation"></i>
+      <span class="btn-toolbar-label">Add a user</span>
+    </div>
+  </div>
+  <app-basic-list [items]="users" [columns]="columns" (onRowClick)="handleRowClick($event)"></app-basic-list>
+</div>
+
+<ng-template #popupTemplateRef>
+    <h1 class="management-page-title">{{currentRow.principalDisplayName}}</h1>
+
+</ng-template>

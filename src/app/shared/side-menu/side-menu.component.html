@@ -1,0 +1,44 @@
+<ul class="list" [style.width]="collapsed ? '48px' : '280px'">
+  <li class="collapse-toggle menu-item" (click)="toggle()">
+    <div class="menu-item-icon">
+      <span class="ms-Icon ms-Icon--GlobalNavButton" aria-hidden="true"></span>
+    </div>
+    <div class="menu-item-name"></div>
+  </li>
+  <li>
+    <a routerLink="/home" class="menu-item" routerLinkActive="menu-item-active">
+    <div class="menu-item-icon">
+      <hr class="active" />
+      <span class="ms-Icon ms-Icon--Home menu-icon" aria-hidden="true"></span>
+    </div>
+    <div class="menu-item-name">Home</div>
+  </a>
+  </li>
+  <li>
+    <a routerLink="/me/devices" class="menu-item" routerLinkActive="menu-item-active">
+    <div class="menu-item-icon">
+      <hr class="active" />
+      <span class="ms-Icon ms-Icon--System menu-icon" aria-hidden="true"></span>
+    </div>
+    <div class="menu-item-name">My Devices</div>
+    </a>
+  </li>
+  <li>
+    <a routerLink="/users" class="menu-item" routerLinkActive="menu-item-active">
+    <div class="menu-item-icon">
+      <hr class="active" />
+      <span class="ms-Icon ms-Icon--Contact menu-icon" aria-hidden="true"></span>
+    </div>
+    <div class="menu-item-name">Users</div>
+  </a>
+  </li>
+  <li>
+    <a routerLink="/devices" class="menu-item" routerLinkActive="menu-item-active">
+    <div class="menu-item-icon">
+      <hr class="active" />
+      <span class="ms-Icon ms-Icon--Devices3 menu-icon" aria-hidden="true"></span>
+    </div>
+    <div class="menu-item-name">Devices</div>
+    </a>
+  </li>
+</ul>
